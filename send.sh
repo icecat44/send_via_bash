@@ -6,7 +6,7 @@ SMTP="smtp.test.ru:25"
 FRIENDLY_NAME="test_from"
 EMAIL_ACCOUNT_PASSWORD="pa$$w0rd"
 
-DATA=$(echo -e "DO NOT REPLY TO THIS EMAIL !!!\n\nРаботающие по ночам компьютеры:\n--------------------------------------------" && nmap -sP 192.168.100.0/24 |grep "test.ru" | awk '{print $5}'| grep -Ev "gitlab|peregovor")
+DATA=$(echo -e "DO NOT REPLY TO THIS EMAIL !!!\n\nРаботающие по ночам компьютеры:\n--------------------------------------------" && nmap -sP 192.168.100.0/24 |grep "test.ru" | awk '{print $5}'| grep -Ev "companny_git|other_comp")
 DATE=$(date +%A" "%d-%m-%Y" "%H:%M)
 
 cat > $TMP << EOF
